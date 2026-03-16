@@ -1,10 +1,17 @@
+aid: oracle-financial-applications
 name: Oracle Financial Applications APIs
-description: Collection of APIs for Oracle's suite of financial management applications including ERP Cloud, EPM Cloud, and related financial services
-image: https://www.oracle.com/a/ocom/img/oracle-logo.svg
-url: https://www.oracle.com/finance/
+description: >-
+  Collection of APIs for Oracle's suite of financial management applications
+  including ERP Cloud, EPM Cloud, and related financial services.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/oracle-financial-applications/refs/heads/main/apis.yml
 created: '2024-01-15'
-modified: '2024-01-15'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
 tags:
 - Financial Management
 - ERP
@@ -176,9 +183,8 @@ apis:
   - type: API Reference
     url: https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusr/rest_endpoints.html
 maintainers:
-- name: Oracle Corporation
-  email: cloud-support@oracle.com
-  url: https://www.oracle.com/corporate/contact/
+  - FN: Kin Lane
+    email: kin@apievangelist.com
 include:
 - name: Oracle Cloud Infrastructure APIs
   url: https://docs.oracle.com/en-us/iaas/api/
