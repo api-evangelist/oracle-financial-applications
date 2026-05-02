@@ -1,28 +1,29 @@
-# Oracle Financial Applications APIs (oracle-financial-applications)
-Collection of APIs for Oracle's suite of financial management applications including ERP Cloud, EPM Cloud, and related financial services
+# Oracle Financial Applications (oracle-financial-applications)
+Collection of APIs for Oracle's suite of financial management applications including ERP Cloud, EPM Cloud, and related financial services.
 
-**URL:** [Visit APIs.json URL](https://www.oracle.com/finance/)
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/oracle-financial-applications/refs/heads/main/apis.yml)
 
 ## Tags:
 
- - Financial Management, ERP, Enterprise Resource Planning, EPM, Enterprise Performance Management, Cloud Applications, Accounting, Financial Reporting
+ - Accounting, Cloud Applications, Enterprise Performance Management, Enterprise Resource Planning, EPM, ERP, Financial Management, Financial Reporting
 
 ## Timestamps
 
-- **Created:** 2024-01-15 
-- **Modified:** 2024-01-15 
+- **Created:** 2024-01-15
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Oracle ERP Cloud REST API
-REST APIs for Oracle ERP Cloud covering modules like General Ledger, Accounts Payable, Accounts Receivable, Cash Management, and Fixed Assets
+REST APIs for Oracle ERP Cloud covering modules like General Ledger, Accounts Payable, Accounts Receivable, Cash Management, and Fixed Assets.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financials/](https://docs.oracle.com/en/cloud/saas/financials/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/fscmRestApi/resources/`
 
 #### Tags:
 
- - ERP, General Ledger, Accounts Payable, Accounts Receivable, REST
+ - Accounts Payable, Accounts Receivable, ERP, General Ledger, REST
 
 #### Properties
 
@@ -32,14 +33,15 @@ REST APIs for Oracle ERP Cloud covering modules like General Ledger, Accounts Pa
 - [SDKs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm)
 
 ### Oracle General Ledger REST API
-APIs for managing chart of accounts, journal entries, budgets, allocations, and financial reporting in Oracle ERP Cloud
+APIs for managing chart of accounts, journal entries, budgets, allocations, and financial reporting in Oracle ERP Cloud.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financials/](https://docs.oracle.com/en/cloud/saas/financials/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/`
 
 #### Tags:
 
- - General Ledger, Journals, Budgets, Chart of Accounts
+ - Budgets, Chart of Accounts, General Ledger, Journals
 
 #### Properties
 
@@ -47,10 +49,11 @@ APIs for managing chart of accounts, journal entries, budgets, allocations, and 
 - [API Reference](https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-general-ledger.html)
 
 ### Oracle Accounts Payable REST API
-APIs for managing supplier invoices, payments, expense reports, and procurement transactions
+APIs for managing supplier invoices, payments, expense reports, and procurement transactions.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financials/](https://docs.oracle.com/en/cloud/saas/financials/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/`
 
 #### Tags:
 
@@ -62,14 +65,15 @@ APIs for managing supplier invoices, payments, expense reports, and procurement 
 - [API Reference](https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-payables.html)
 
 ### Oracle Accounts Receivable REST API
-APIs for managing customer invoices, receipts, credit memos, and revenue recognition
+APIs for managing customer invoices, receipts, credit memos, and revenue recognition.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financials/](https://docs.oracle.com/en/cloud/saas/financials/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/`
 
 #### Tags:
 
- - Accounts Receivable, Invoices, Receipts, Customers
+ - Accounts Receivable, Customers, Invoices, Receipts
 
 #### Properties
 
@@ -77,14 +81,15 @@ APIs for managing customer invoices, receipts, credit memos, and revenue recogni
 - [API Reference](https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-receivables.html)
 
 ### Oracle Cash Management REST API
-APIs for bank account management, cash positioning, forecasting, and reconciliation
+APIs for bank account management, cash positioning, forecasting, and reconciliation.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financials/](https://docs.oracle.com/en/cloud/saas/financials/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/`
 
 #### Tags:
 
- - Cash Management, Bank Accounts, Reconciliation, Treasury
+ - Bank Accounts, Cash Management, Reconciliation, Treasury
 
 #### Properties
 
@@ -92,14 +97,15 @@ APIs for bank account management, cash positioning, forecasting, and reconciliat
 - [API Reference](https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-cash-management.html)
 
 ### Oracle Fixed Assets REST API
-APIs for managing asset lifecycle, depreciation, mass additions, and asset tracking
+APIs for managing asset lifecycle, depreciation, mass additions, and asset tracking.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financials/](https://docs.oracle.com/en/cloud/saas/financials/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/`
 
 #### Tags:
 
- - Fixed Assets, Depreciation, Asset Management
+ - Asset Management, Depreciation, Fixed Assets
 
 #### Properties
 
@@ -107,14 +113,15 @@ APIs for managing asset lifecycle, depreciation, mass additions, and asset track
 - [API Reference](https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-assets.html)
 
 ### Oracle EPM Cloud REST API
-REST APIs for Oracle Enterprise Performance Management Cloud including Planning, Financial Consolidation and Close, Tax Reporting, and Account Reconciliation
+REST APIs for Oracle Enterprise Performance Management Cloud including Planning, Financial Consolidation and Close, Tax Reporting, and Account Reconciliation.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/](https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/epm/rest/`
 
 #### Tags:
 
- - EPM, Planning, Budgeting, Financial Consolidation, Account Reconciliation
+ - Account Reconciliation, Budgeting, EPM, Financial Consolidation, Planning
 
 #### Properties
 
@@ -123,14 +130,15 @@ REST APIs for Oracle Enterprise Performance Management Cloud including Planning,
 - [Authentication](https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/api_authentication.html)
 
 ### Oracle Financial Reporting REST API
-APIs for creating, managing, and executing financial reports, including Smart View integration
+APIs for creating, managing, and executing financial reports, including Smart View integration.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/](https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/epm/rest/`
 
 #### Tags:
 
- - Financial Reporting, Reports, Analytics
+ - Analytics, Financial Reporting, Reports
 
 #### Properties
 
@@ -138,14 +146,15 @@ APIs for creating, managing, and executing financial reports, including Smart Vi
 - [API Reference](https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/rest_api_financial_reporting_overview.html)
 
 ### Oracle FCCS REST API
-APIs for Financial Consolidation and Close Cloud Service for consolidations, eliminations, currency translation, and intercompany management
+APIs for Financial Consolidation and Close Cloud Service for consolidations, eliminations, currency translation, and intercompany management.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/financial-consolidation-cloud/](https://docs.oracle.com/en/cloud/saas/financial-consolidation-cloud/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/epm/rest/`
 
 #### Tags:
 
- - Consolidation, Close Management, Eliminations, Currency Translation
+ - Close Management, Consolidation, Currency Translation, Eliminations
 
 #### Properties
 
@@ -153,14 +162,15 @@ APIs for Financial Consolidation and Close Cloud Service for consolidations, eli
 - [API Reference](https://docs.oracle.com/en/cloud/saas/financial-consolidation-cloud/fcgrs/rest_endpoints.html)
 
 ### Oracle ARCS REST API
-APIs for Account Reconciliation Cloud Service for managing reconciliations, certifications, and compliance workflows
+APIs for Account Reconciliation Cloud Service for managing reconciliations, certifications, and compliance workflows.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/](https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/epm/rest/`
 
 #### Tags:
 
- - Account Reconciliation, Compliance, Certifications
+ - Account Reconciliation, Certifications, Compliance
 
 #### Properties
 
@@ -168,14 +178,15 @@ APIs for Account Reconciliation Cloud Service for managing reconciliations, cert
 - [API Reference](https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/suarc/rest_endpoints.html)
 
 ### Oracle Planning REST API
-APIs for Planning and Budgeting Cloud Service including data management, business rules, and planning operations
+APIs for Planning and Budgeting Cloud Service including data management, business rules, and planning operations.
 
 **Human URL:** [https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/](https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/)
 
+**Base URL:** `https://{instance}.oraclecloud.com/epm/rest/`
 
 #### Tags:
 
- - Planning, Budgeting, Forecasting, Workforce Planning
+ - Budgeting, Forecasting, Planning, Workforce Planning
 
 #### Properties
 
@@ -195,6 +206,6 @@ APIs for Planning and Budgeting Cloud Service including data management, busines
 
 ## Maintainers
 
-**FN:** Oracle Corporation
+**FN:** Kin Lane
 
-**Email:** cloud-support@oracle.com
+**Email:** kin@apievangelist.com
