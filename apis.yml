@@ -58,7 +58,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/api-general-ledger.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-general-ledger.html
   - name: Oracle Accounts Payable REST API
     description: >-
@@ -74,7 +74,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/api-payables.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-payables.html
   - name: Oracle Accounts Receivable REST API
     description: >-
@@ -89,7 +89,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/api-receivables.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-receivables.html
   - name: Oracle Cash Management REST API
     description: >-
@@ -104,7 +104,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/api-cash-management.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-cash-management.html
   - name: Oracle Fixed Assets REST API
     description: >-
@@ -118,7 +118,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/api-assets.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/financials/24d/farfa/endpoints-assets.html
   - name: Oracle EPM Cloud REST API
     description: >-
@@ -135,7 +135,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/rest_endpoints.html
       - type: Authentication
         url: https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/api_authentication.html
@@ -152,7 +152,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/rep_rest_api_intro.html
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/enterprise-performance-management-common/prest/rest_api_financial_reporting_overview.html
   - name: Oracle FCCS REST API
     description: >-
@@ -168,7 +168,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/financial-consolidation-cloud/fcgrs/
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/financial-consolidation-cloud/fcgrs/rest_endpoints.html
   - name: Oracle ARCS REST API
     description: >-
@@ -183,7 +183,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/suarc/
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/suarc/rest_endpoints.html
   - name: Oracle Planning REST API
     description: >-
@@ -199,7 +199,7 @@ apis:
     properties:
       - type: Documentation
         url: https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusr/
-      - type: API Reference
+      - type: APIReference
         url: https://docs.oracle.com/en/cloud/saas/planning-budgeting-cloud/pfusr/rest_endpoints.html
 maintainers:
   - FN: Kin Lane
@@ -212,17 +212,17 @@ include:
 common:
   - type: Portal
     url: https://cloud.oracle.com/
-  - type: Getting Started
+  - type: GettingStarted
     url: https://docs.oracle.com/en/cloud/saas/financials/get-started.html
   - type: Support
     url: https://support.oracle.com/
-  - type: Status
+  - type: StatusPage
     url: https://ocistatus.oraclecloud.com/
   - type: Pricing
     url: https://www.oracle.com/cloud/price-list.html
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.oracle.com/legal/terms.html
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.oracle.com/legal/privacy/
   - type: Training
     url: https://education.oracle.com/
