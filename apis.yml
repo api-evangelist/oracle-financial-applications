@@ -210,6 +210,8 @@ include:
   - name: Oracle Integration Cloud APIs
     url: https://docs.oracle.com/en/cloud/paas/integration-cloud/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/oracle
   - type: Portal
     url: https://cloud.oracle.com/
   - type: GettingStarted
