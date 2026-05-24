@@ -1,0 +1,336 @@
+openapi: 3.1.0
+info:
+  title: Oracle Financials Cloud REST API
+  description: |
+    REST API surface for Oracle Fusion Cloud Financials. Resources sit
+    under `/fscmRestApi/resources/11.13.18.05/{resourceName}` on each
+    customer's Oracle Cloud instance. Authentication uses HTTP Basic
+    Authentication or OAuth 2.0 Bearer tokens issued by the customer's
+    Oracle Identity Cloud Service / IDCS tenant.
+
+    This specification documents a representative slice of the Financials
+    Cloud resources covering General Ledger (journal batches, currency
+    rates), Payables (invoices), Receivables (transactions), Cash
+    Management (bank accounts), and Fixed Assets.
+  version: "11.13.18.05"
+  contact:
+    name: Oracle Support
+    url: https://support.oracle.com
+servers:
+  - url: https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05
+    description: Customer Fusion Cloud Financials base URL.
+    variables:
+      instance:
+        default: example
+        description: Customer-specific Oracle Cloud instance.
+security:
+  - basicAuth: []
+  - bearerAuth: []
+tags:
+  - name: General Ledger
+    description: General Ledger journal batches and currency rates.
+  - name: Payables
+    description: Accounts Payable invoices.
+  - name: Receivables
+    description: Customer transactions.
+  - name: Cash Management
+    description: Bank accounts and statements.
+  - name: Fixed Assets
+    description: Asset lifecycle resources.
+paths:
+  /journalBatches:
+    get:
+      tags: [General Ledger]
+      summary: List journal batches
+      operationId: listJournalBatches
+      parameters:
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Q'
+      responses:
+        "200":
+          description: Journal batches collection.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceCollection'
+        "401":
+          $ref: '#/components/responses/Unauthorized'
+    post:
+      tags: [General Ledger]
+      summary: Create a journal batch
+      operationId: createJournalBatch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        "201":
+          description: Journal batch created.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /journalBatches/{JournalBatchesUniqID}:
+    parameters:
+      - $ref: '#/components/parameters/JournalBatchesUniqID'
+    get:
+      tags: [General Ledger]
+      summary: Get a journal batch
+      operationId: getJournalBatch
+      responses:
+        "200":
+          description: Journal batch resource.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+    patch:
+      tags: [General Ledger]
+      summary: Update a journal batch
+      operationId: updateJournalBatch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        "200":
+          description: Updated journal batch.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /currencyRates:
+    get:
+      tags: [General Ledger]
+      summary: List currency rates
+      operationId: listCurrencyRates
+      parameters:
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Q'
+      responses:
+        "200":
+          description: Currency rates collection.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceCollection'
+  /currencyRates/{currencyRatesUniqID}:
+    parameters:
+      - name: currencyRatesUniqID
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [General Ledger]
+      summary: Get a currency rate
+      operationId: getCurrencyRate
+      responses:
+        "200":
+          description: Currency rate resource.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /invoices:
+    get:
+      tags: [Payables]
+      summary: List payables invoices
+      operationId: listInvoices
+      parameters:
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Q'
+      responses:
+        "200":
+          description: Invoices collection.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceCollection'
+    post:
+      tags: [Payables]
+      summary: Create a payables invoice
+      operationId: createInvoice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        "201":
+          description: Invoice created.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /invoices/{InvoiceId}:
+    parameters:
+      - name: InvoiceId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Payables]
+      summary: Get a payables invoice
+      operationId: getInvoice
+      responses:
+        "200":
+          description: Invoice resource.
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+  /receivablesCustomerTransactions:
+    get:
+      tags: [Receivables]
+      summary: List receivables customer transactions
+      operationId: listReceivablesTransactions
+      parameters:
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Offset'
+      responses:
+        "200":
+          description: Customer transactions.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceCollection'
+  /cashCashBalancesUploads:
+    get:
+      tags: [Cash Management]
+      summary: List cash balance uploads
+      operationId: listCashBalanceUploads
+      responses:
+        "200":
+          description: Cash balance uploads.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceCollection'
+  /fixedAssets:
+    get:
+      tags: [Fixed Assets]
+      summary: List fixed assets
+      operationId: listFixedAssets
+      parameters:
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Offset'
+      responses:
+        "200":
+          description: Fixed assets collection.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceCollection'
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic Authentication with Oracle Cloud user credentials.
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: OAuth 2.0 Bearer token from Oracle IDCS / IAM.
+  parameters:
+    Limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        default: 25
+        maximum: 500
+    Offset:
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+        default: 0
+    Q:
+      name: q
+      in: query
+      required: false
+      schema:
+        type: string
+      description: |
+        Oracle filter expression (e.g. `Status='Posted'`).
+    JournalBatchesUniqID:
+      name: JournalBatchesUniqID
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    Unauthorized:
+      description: Missing or invalid credentials.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    ResourceCollection:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        count:
+          type: integer
+        hasMore:
+          type: boolean
+        limit:
+          type: integer
+        offset:
+          type: integer
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/Link'
+    Link:
+      type: object
+      properties:
+        rel:
+          type: string
+        href:
+          type: string
+        name:
+          type: string
+        kind:
+          type: string
+    ErrorResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+        "o:errorCode":
+          type: string
+externalDocs:
+  description: Oracle Financials Cloud REST API Documentation
+  url: https://docs.oracle.com/en/cloud/saas/financials/26a/farfa/index.html
