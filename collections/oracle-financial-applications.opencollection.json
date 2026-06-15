@@ -1,0 +1,307 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Oracle Financials Cloud REST API",
+    "version": "11.13.18.05"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "General Ledger",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List journal batches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Oracle filter expression (e.g. `Status='Posted'`).\n"
+              }
+            ]
+          },
+          "docs": "List journal batches"
+        },
+        {
+          "info": {
+            "name": "Create a journal batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a journal batch"
+        },
+        {
+          "info": {
+            "name": "Get a journal batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches/:JournalBatchesUniqID",
+            "params": [
+              {
+                "name": "JournalBatchesUniqID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a journal batch"
+        },
+        {
+          "info": {
+            "name": "Update a journal batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches/:JournalBatchesUniqID",
+            "params": [
+              {
+                "name": "JournalBatchesUniqID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a journal batch"
+        },
+        {
+          "info": {
+            "name": "List currency rates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/currencyRates",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Oracle filter expression (e.g. `Status='Posted'`).\n"
+              }
+            ]
+          },
+          "docs": "List currency rates"
+        },
+        {
+          "info": {
+            "name": "Get a currency rate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/currencyRates/:currencyRatesUniqID",
+            "params": [
+              {
+                "name": "currencyRatesUniqID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a currency rate"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Payables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List payables invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Oracle filter expression (e.g. `Status='Posted'`).\n"
+              }
+            ]
+          },
+          "docs": "List payables invoices"
+        },
+        {
+          "info": {
+            "name": "Create a payables invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a payables invoice"
+        },
+        {
+          "info": {
+            "name": "Get a payables invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices/:InvoiceId",
+            "params": [
+              {
+                "name": "InvoiceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a payables invoice"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Receivables",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List receivables customer transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/receivablesCustomerTransactions",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List receivables customer transactions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Cash Management",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List cash balance uploads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/cashCashBalancesUploads"
+          },
+          "docs": "List cash balance uploads"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Fixed Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List fixed assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/fixedAssets",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List fixed assets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
