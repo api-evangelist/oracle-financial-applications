@@ -210,6 +210,10 @@ include:
   - name: Oracle Integration Cloud APIs
     url: https://docs.oracle.com/en/cloud/paas/integration-cloud/
 common:
+  - type: DomainSecurity
+    url: security/oracle-financial-applications-domain-security.yml
+  - type: Authentication
+    url: authentication/oracle-financial-applications-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/oracle
   - type: Portal
