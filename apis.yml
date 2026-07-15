@@ -210,6 +210,8 @@ include:
   - name: Oracle Integration Cloud APIs
     url: https://docs.oracle.com/en/cloud/paas/integration-cloud/
 common:
+  - type: AgenticAccess
+    url: agentic-access/oracle-financial-applications-agentic-access.yml
   - type: DomainSecurity
     url: security/oracle-financial-applications-domain-security.yml
   - type: Authentication
