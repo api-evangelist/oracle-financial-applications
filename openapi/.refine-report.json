@@ -1,0 +1,22 @@
+{
+  "provider": "oracle-financial-applications",
+  "sources": [
+    "oracle-financial-applications-cash-management-api-openapi.yml",
+    "oracle-financial-applications-fixed-assets-api-openapi.yml",
+    "oracle-financial-applications-general-ledger-api-openapi.yml",
+    "oracle-financial-applications-payables-api-openapi.yml",
+    "oracle-financial-applications-receivables-api-openapi.yml"
+  ],
+  "outputs": [
+    "oracle-financial-applications-cash-management-api-openapi.yml",
+    "oracle-financial-applications-fixed-assets-api-openapi.yml",
+    "oracle-financial-applications-general-ledger-api-openapi.yml",
+    "oracle-financial-applications-payables-api-openapi.yml",
+    "oracle-financial-applications-receivables-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
