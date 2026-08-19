@@ -1,0 +1,143 @@
+{
+  "item": [
+    {
+      "id": "b0ffbb45-ec69-4a78-988a-41f8327eab7e",
+      "name": "Cash Management",
+      "description": {
+        "content": "Bank accounts and statements.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "12690f29-9a48-46fa-8a08-c6a82dbc02ae",
+          "name": "List cash balance uploads",
+          "request": {
+            "name": "List cash balance uploads",
+            "description": {},
+            "url": {
+              "path": [
+                "cashCashBalancesUploads"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Customer-specific Oracle Cloud instance.",
+                  "type": "any",
+                  "value": "{{instance}}",
+                  "key": "instance"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9d49f298-ac41-49d6-91bc-c293a2ce8e56",
+              "name": "Cash balance uploads.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cashCashBalancesUploads"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Customer-specific Oracle Cloud instance.",
+                      "type": "any",
+                      "value": "{{instance}}",
+                      "key": "instance"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"items\": [\n    {\n      \"key_0\": 5013\n    },\n    {\n      \"key_0\": 5858\n    }\n  ],\n  \"count\": 6071,\n  \"hasMore\": false,\n  \"limit\": 7307,\n  \"offset\": 113,\n  \"links\": [\n    {\n      \"rel\": \"string\",\n      \"href\": \"string\",\n      \"name\": \"string\",\n      \"kind\": \"string\"\n    },\n    {\n      \"rel\": \"string\",\n      \"href\": \"string\",\n      \"name\": \"string\",\n      \"kind\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Customer-specific Oracle Cloud instance.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "example",
+      "key": "instance"
+    },
+    {
+      "type": "string",
+      "value": "https://{{instance}}.oraclecloud.com/fscmRestApi/resources/11.13.18.05",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "af104d0d-a312-4152-be81-7237a50c1829",
+    "name": "Oracle Financials Cloud REST Cash Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API surface for Oracle Fusion Cloud Financials. Resources sit\nunder `/fscmRestApi/resources/11.13.18.05/{resourceName}` on each\ncustomer's Oracle Cloud instance. Authentication uses HTTP Basic\nAuthentication or OAuth 2.0 Bearer tokens issued by the customer's\nOracle Identity Cloud Service / IDCS tenant.\n\nThis specification documents a representative slice of the Financials\nCloud resources covering General Ledger (journal batches, currency\nrates), Payables (invoices), Receivables (transactions), Cash\nManagement (bank accounts), and Fixed Assets.\n\n\nContact Support:\n Name: Oracle Support",
+      "type": "text/plain"
+    }
+  }
+}

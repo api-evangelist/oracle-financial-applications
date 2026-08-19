@@ -1,0 +1,156 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Oracle Financials Cloud REST Cash Management General Ledger API",
+    "version": "11.13.18.05"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "General Ledger",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List journal batches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Oracle filter expression (e.g. `Status='Posted'`).\n"
+              }
+            ]
+          },
+          "docs": "List journal batches"
+        },
+        {
+          "info": {
+            "name": "Create a journal batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a journal batch"
+        },
+        {
+          "info": {
+            "name": "Get a journal batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches/:JournalBatchesUniqID",
+            "params": [
+              {
+                "name": "JournalBatchesUniqID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a journal batch"
+        },
+        {
+          "info": {
+            "name": "Update a journal batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/journalBatches/:JournalBatchesUniqID",
+            "params": [
+              {
+                "name": "JournalBatchesUniqID",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a journal batch"
+        },
+        {
+          "info": {
+            "name": "List currency rates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/currencyRates",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "Oracle filter expression (e.g. `Status='Posted'`).\n"
+              }
+            ]
+          },
+          "docs": "List currency rates"
+        },
+        {
+          "info": {
+            "name": "Get a currency rate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{instance}.oraclecloud.com/fscmRestApi/resources/11.13.18.05/currencyRates/:currencyRatesUniqID",
+            "params": [
+              {
+                "name": "currencyRatesUniqID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a currency rate"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
