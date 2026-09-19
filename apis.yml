@@ -40,6 +40,14 @@ tags:
 - Accounting
 - Cloud Applications
 - Enterprise Performance Management
+- ERP
+- EPM
+- Financial Management
+- Financial Reporting
+tags_raw:
+- Accounting
+- Cloud Applications
+- Enterprise Performance Management
 - Enterprise Resource Planning
 - EPM
 - ERP
@@ -168,6 +176,10 @@ apis:
   humanUrl: https://docs.oracle.com/en/cloud/saas/account-reconcile-cloud/
   baseUrl: https://{instance}.oraclecloud.com/epm/rest/
   tags:
+  - Account Reconciliation
+  - Certification
+  - Compliance
+  tags_raw:
   - Account Reconciliation
   - Certifications
   - Compliance
