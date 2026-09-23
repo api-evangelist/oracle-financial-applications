@@ -1,11 +1,7 @@
 {
   "provider": "oracle-financial-applications",
   "sources": [
-    "oracle-financial-applications-cash-management-api-openapi.yml",
-    "oracle-financial-applications-fixed-assets-api-openapi.yml",
-    "oracle-financial-applications-general-ledger-api-openapi.yml",
-    "oracle-financial-applications-payables-api-openapi.yml",
-    "oracle-financial-applications-receivables-api-openapi.yml"
+    "_original/oracle-financial-applications-openapi.yml"
   ],
   "outputs": [
     "oracle-financial-applications-cash-management-api-openapi.yml",
@@ -17,6 +13,16 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "oracle-financial-applications-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "oracle-financial-applications-cash-management-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "oracle-financial-applications-fixed-assets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "oracle-financial-applications-general-ledger-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "oracle-financial-applications-payables-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "oracle-financial-applications-receivables-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,26 +1,7 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Oracle Financials Cloud REST Cash Management General Ledger API
-  description: 'REST API surface for Oracle Fusion Cloud Financials. Resources sit
-
-    under `/fscmRestApi/resources/11.13.18.05/{resourceName}` on each
-
-    customer''s Oracle Cloud instance. Authentication uses HTTP Basic
-
-    Authentication or OAuth 2.0 Bearer tokens issued by the customer''s
-
-    Oracle Identity Cloud Service / IDCS tenant.
-
-
-    This specification documents a representative slice of the Financials
-
-    Cloud resources covering General Ledger (journal batches, currency
-
-    rates), Payables (invoices), Receivables (transactions), Cash
-
-    Management (bank accounts), and Fixed Assets.
-
-    '
+  title: Oracle Financials Cloud REST General Ledger API
+  description: REST API surface for Oracle Fusion Cloud Financials.
   version: 11.13.18.05
   contact:
     name: Oracle Support
@@ -153,16 +134,16 @@ paths:
                 additionalProperties: true
 components:
   schemas:
-    ErrorResponse:
+    Link:
       type: object
       properties:
-        title:
+        rel:
           type: string
-        status:
-          type: integer
-        detail:
+        href:
           type: string
-        o:errorCode:
+        name:
+          type: string
+        kind:
           type: string
     ResourceCollection:
       type: object
@@ -184,34 +165,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Link'
-    Link:
+    ErrorResponse:
       type: object
       properties:
-        rel:
+        title:
           type: string
-        href:
+        status:
+          type: integer
+        detail:
           type: string
-        name:
+        o:errorCode:
           type: string
-        kind:
-          type: string
-  responses:
-    Unauthorized:
-      description: Missing or invalid credentials.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorResponse'
   parameters:
-    Q:
-      name: q
-      in: query
-      required: false
-      schema:
-        type: string
-      description: 'Oracle filter expression (e.g. `Status=''Posted''`).
-
-        '
     Offset:
       name: offset
       in: query
@@ -233,6 +198,22 @@ components:
         type: integer
         default: 25
         maximum: 500
+    Q:
+      name: q
+      in: query
+      required: false
+      schema:
+        type: string
+      description: 'Oracle filter expression (e.g. `Status=''Posted''`).
+
+        '
+  responses:
+    Unauthorized:
+      description: Missing or invalid credentials.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
   securitySchemes:
     basicAuth:
       type: http
